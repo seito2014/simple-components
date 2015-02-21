@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 /*
 * base
 */
@@ -464,8 +465,8 @@ body {
   font-size: 1.2rem;
   line-height: 1;
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  background: #eee;
-  color: #423f3d; }
+  background: #F5F1E9;
+  color: #555; }
 
 input, button, select, textarea {
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
@@ -478,9 +479,49 @@ input, button, select, textarea {
   .lt-ie9 .for-old {
     display: block; }
 
+.container, .nav, .contents, .main-view {
+  width: 100%;
+  max-width: 1220px;
+  min-width: 320px;
+  padding: 0 10px;
+  margin: 0 auto; }
+
 /*
 * layout
 */
+.header {
+  width: 100%;
+  background: #fff; }
+
+.nav {
+  font-family: 'Source Sans Pro', sans-serif; }
+  .nav-list {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-left: 1px solid #F5F1E9; }
+  .nav-item {
+    width: 20%;
+    height: 60px;
+    display: table-cell;
+    vertical-align: center;
+    text-align: center;
+    border-right: 1px solid #F5F1E9; }
+    .nav-item > a {
+      font-size: 20px;
+      font-size: 2rem;
+      width: 100%;
+      display: block;
+      height: 60px;
+      line-height: 60px;
+      text-decoration: none;
+      background: #fff;
+      color: #555;
+      transition: color 0.35s, background-color 0.35s; }
+      .nav-item > a:hover {
+        background: #555;
+        color: #fff; }
+
 /*
 * sprite
 */
@@ -490,6 +531,38 @@ input, button, select, textarea {
 /*
 全ページ共通で使い回すモジュールのスタイル
 */
+.main-view-visual {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+.main-view-text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  z-index: 2;
+  color: #A09F9B;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif; }
+  .main-view-text > span {
+    display: block; }
+    .main-view-text > span:nth-child(1) {
+      font-size: 140px;
+      font-size: 14rem;
+      font-weight: bold;
+      margin-bottom: 34px; }
+    .main-view-text > span:nth-child(2) {
+      font-size: 50px;
+      font-size: 5rem;
+      margin-bottom: 26px; }
+    .main-view-text > span:nth-child(3) {
+      font-size: 20px;
+      font-size: 2rem; }
+
 /*
 * module
 */

@@ -8,7 +8,7 @@ $path-sprite: "../image/sprite/dest/";
 
 // clum width
 $gutter: 0;
-$size-max: 100%;
+$size-max: 1220px;
 $size-min: 320px;
 
 // scale (sprite生成で使用)
@@ -16,6 +16,8 @@ $default-scale: 1;
 
 //font
 $font: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+$font-en: 'Source Sans Pro', sans-serif;
 
 //speed
 $speed: 0.35s;

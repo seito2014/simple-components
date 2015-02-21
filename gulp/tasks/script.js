@@ -35,7 +35,8 @@ function taskScripts(pathSrc,pathDest){
                 extensions: ['', '.js', '.html'],
                 alias: {
                     bower: 'bower_components',
-                    jquery: __dirname + '/../../bower_components/jquery/dist/jquery.js'
+                    jquery: __dirname + '/../../bower_components/jquery/dist/jquery.js',
+                    particles: __dirname + '/../../bower_components/particles.js/particles.js'
                 }
             },
             plugins: [

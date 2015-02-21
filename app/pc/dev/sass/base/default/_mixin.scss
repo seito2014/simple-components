@@ -5,6 +5,12 @@
     transform: translate(-50%,-50%);
 }
 
+@mixin middle{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
 @mixin rem($size, $base: 10) {
     font-size: $size + px;
     font-size: ($size / $base) + rem;

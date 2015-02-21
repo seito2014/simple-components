@@ -1,2 +1,2 @@
 //jsファイルを読み込み
-//require('./');
+require('./module/visual');

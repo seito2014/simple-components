@@ -33,3 +33,11 @@ textarea {
         display: block;
     }
 }
+
+.container {
+    width: 100%;
+    max-width: $size-max;
+    min-width: $size-min;
+    padding: 0 10px;
+    margin: 0 auto;
+}

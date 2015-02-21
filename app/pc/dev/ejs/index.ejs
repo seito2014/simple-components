@@ -5,10 +5,55 @@
     page_class = "page-index";
 %>
 <% include layout/_head %>
+
+<div class="main-view">
+    <div class="main-view-visual" id="js-main-view-visual"></div>
+    <h1 class="main-view-text">
+        <span>CLEAR BOX</span>
+        <span>"Let's do coding speedy,and go home early."</span>
+        <span>This is simple components, with HTML,CSS,Javascript.</span>
+    </h1>
+</div>
+
 <% include layout/_header %>
 
             <!--contents ここから-->
             <main class="contents">
+
+                <section class="section">
+                    <h1 class="hading">New Components</h1>
+
+                    <div class="section-contents">
+                        <ul class="card-list">
+                        <% for(var i=0; i< 3; i++) { %>
+                            <li class="card-item">
+                                <article class="card">
+                                    <a href="#" class="card-inner">
+                                        <img src="http://placehold.it/300x200" height="200" width="300" alt="" class="card-image">
+                                        <h1 class="card-heading">Component</h1>
+                                        <ul class="card-tag-list">
+                                            <li class="card-tag-item">
+                                                <a class="tag" href="#">form</a>
+                                            </li>
+                                            <li class="card-tag-item">
+                                                <a class="tag" href="#">html</a>
+                                            </li>
+                                            <li class="card-tag-item">
+                                                <a class="tag" href="#">css</a>
+                                            </li>
+                                            <li class="card-tag-item">
+                                                <a class="tag" href="#">js</a>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                </article>
+                            </li>
+                        <% } %>
+                        </ul>
+                    </div>
+
+                </section>
+
             </main>
             <!--contents ここまで-->
 
