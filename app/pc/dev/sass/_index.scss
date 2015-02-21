@@ -1,40 +1,10 @@
-.main-view {
-    @extend .container;
-    
-    &-visual {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: 1;
+.page-index {
+
+    .header {
+        margin-bottom: 142px;
     }
-    
-    &-text {
-        width: 100%;
-        @include middle;
-        z-index: 2;
-        color: $grey;
-        text-align: center;
-        font-family: $font-en;
 
-        > span {
-            display: block;
-
-            &:nth-child(1) {
-                @include rem(140);
-                font-weight: bold;
-                margin-bottom: 34px;
-            }
-
-            &:nth-child(2) {
-                @include rem(50);
-                margin-bottom: 26px;
-            }
-
-            &:nth-child(3) {
-                @include rem(20);
-            }
-        }
+    .section {
+        margin-bottom: 192px;
     }
 }

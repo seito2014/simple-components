@@ -1,0 +1,69 @@
+/*
+#overview
+card
+
+_card.scss
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+.card {
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    background: #fff;
+    box-shadow: $shadow;
+    position: relative;
+    transition: box-shadow $speed, transform $speed;
+
+    &:hover {
+        transform: translate3d(6px,6px,0);
+        box-shadow: $shadow-none;
+        
+        a {
+            color: $color-a;
+        }
+    }
+
+    //&-embed {}
+
+    &-body {
+        padding: 12px 15px 18px;
+        background: #3D3D3E;
+    }
+
+    &-heading {
+        margin-bottom: 18px;
+
+        > a {
+            @include rem(20);
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            line-height: 1.6;
+            transition: color $speed;
+        }
+    }
+
+    &-tag-list {
+        letter-spacing: -.4em;
+        margin: 0 -5px 8px;
+    }
+    
+    &-tag-item {
+        display: inline-block;
+        letter-spacing: 0;
+        margin: 5px;
+    }
+
+    &-footer {
+        color: #fff;
+        font-family: $font-en;
+        text-align: right;
+    }
+}

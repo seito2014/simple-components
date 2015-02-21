@@ -1,3 +1,101 @@
 /*
 全ページ共通で使い回すモジュールのスタイル
 */
+
+//main-view
+.main-view {
+    @extend .container;
+
+    &-visual {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    &-text {
+        width: 100%;
+        @include middle;
+        z-index: 2;
+        color: $grey;
+        text-align: center;
+        font-family: $font-en;
+
+        > span {
+            display: block;
+
+            &:nth-child(1) {
+                @include rem(140);
+                font-weight: bold;
+                margin-bottom: 34px;
+            }
+
+            &:nth-child(2) {
+                @include rem(50);
+                margin-bottom: 26px;
+            }
+
+            &:nth-child(3) {
+                @include rem(20);
+                margin-bottom: 33px;
+            }
+        }
+    }
+}
+
+//section
+.section {
+
+    &-text {
+        @include rem(18);
+        line-height: 2;
+
+        strong,b,em {
+            font-weight: bold;
+        }
+        
+        p , ul {
+            margin-bottom: 29px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 23px;
+
+            &:before {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                background: $color-b;
+                position: absolute;
+                transform: translate(-23px,12px) rotate(45deg);
+            }
+        }
+
+    }
+
+    &-footer {
+        margin-top: 50px;
+        text-align: center;
+    }
+}
+
+//card-wrapper
+.card {
+
+    &-list {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    &-item {
+        display: table-cell;
+        width: 33.33%;
+        text-align: center;
+        padding: 0 15px;
+    }
+}

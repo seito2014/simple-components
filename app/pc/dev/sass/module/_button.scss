@@ -11,10 +11,32 @@ _button.scss
 ```
 */
 
-//.button {
-//    display: inline-block;
-//    height: 40px;
-//    line-height: 40px;
-//    text-decoration: none;
-//    cursor: pointer;
-//}
+.button {
+    @include rem(25);
+    display: inline-block;
+    width: 60%;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #fff;
+    color: $default;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: bold;
+    font-family: $font-en;
+    box-shadow: $shadow;
+    position: relative;
+    transition: box-shadow $speed, transform $speed , color $speed;
+
+    &:hover {
+        transform: translate3d(6px,6px,0);
+        box-shadow: $shadow-none;
+        color: $color-a;
+    }
+
+    &-primary {
+        width: 30%;
+        color: $grey;
+    }
+}

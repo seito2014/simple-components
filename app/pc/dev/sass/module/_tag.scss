@@ -1,0 +1,22 @@
+/*
+#overview
+tag
+
+_tag.scss
+*/
+
+/*
+#styleguide
+```
+```
+*/
+
+.tag {
+    display: inline-block;
+    padding: 4px 10px 6px;
+    text-decoration: none;
+    color: $default;
+    background: #fff;
+    border-radius: 3px;
+    transition: color $speed;
+}
