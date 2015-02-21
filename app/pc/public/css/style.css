@@ -531,6 +531,17 @@ input, button, select, textarea {
         background: #555;
         color: #fff; }
 
+.footer {
+  font-size: 18px;
+  font-size: 1.8rem;
+  height: 80px;
+  line-height: 80px;
+  background: #555;
+  color: #fff;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 1px; }
+
 .contents {
   padding: 0; }
 

@@ -1,0 +1,10 @@
+.footer {
+    @include rem(18);
+    height: 80px;
+    line-height: 80px;
+    background: $default;
+    color: #fff;
+    text-align: center;
+    font-family: $font-en;
+    letter-spacing: 1px;
+}
