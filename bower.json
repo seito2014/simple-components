@@ -1,0 +1,14 @@
+{
+  "name": "Seito Template",
+  "version": "0.0.0",
+  "authors": [
+    "Horiguchi Seito"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "modernizer": "~2.8.2"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.3"
+  }
+}
