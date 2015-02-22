@@ -7,4 +7,13 @@
     text-align: center;
     font-family: $font-en;
     letter-spacing: 1px;
+
+    a {
+        color: $color-a;
+        transition: color $speed;
+        
+        &:hover {
+            color: #fff;
+        }
+    }
 }

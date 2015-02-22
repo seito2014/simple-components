@@ -39,4 +39,21 @@ _button.scss
         width: 30%;
         color: $grey;
     }
+    
+    &-twitter {
+        color: #fff;
+        background: $twitter;
+        
+        &:hover {
+            color: $default;
+        }
+    }
+    
+    &.small {
+        @include rem(22);
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        font-weight: normal;
+    }
 }
