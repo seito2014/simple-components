@@ -16,6 +16,14 @@
 /*
 * 変数用scss(カラーコード以外)
 */
+.header-inner {
+  zoom: 1; }
+  .header-inner:before, .header-inner:after {
+    content: "";
+    display: block; }
+  .header-inner:after {
+    clear: both; }
+
 body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -92,6 +100,44 @@ table {
   padding: 0;
   margin: 0;
   line-height: 1; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0); }
+
+  1% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0); }
+
+  100% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0); }
+
+  1% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0); }
+
+  100% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
 
 .u_mt0 {
   margin-top: 0px !important; }
@@ -501,14 +547,15 @@ input, button, select, textarea {
   width: 100%;
   background: #fff;
   box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2); }
+  .header-lower .nav-list {
+    border-top: 1px solid #F5F1E9; }
 
 .nav {
   font-family: 'Source Sans Pro', sans-serif; }
   .nav-list {
     width: 100%;
     display: table;
-    table-layout: fixed;
-    border-left: 1px solid #F5F1E9; }
+    table-layout: fixed; }
   .nav-item {
     width: 25%;
     height: 60px;
@@ -516,6 +563,8 @@ input, button, select, textarea {
     vertical-align: center;
     text-align: center;
     border-right: 1px solid #F5F1E9; }
+    .nav-item:last-child {
+      border-right: 0; }
     .nav-item > a {
       font-size: 20px;
       font-size: 2rem;
@@ -530,6 +579,95 @@ input, button, select, textarea {
       .nav-item > a:hover {
         background: #555;
         color: #fff; }
+
+.header-inner {
+  width: 100%;
+  padding: 20px 30px; }
+  .header-inner-left {
+    float: left;
+    width: 40%; }
+  .header-inner-right {
+    float: right;
+    width: 40%;
+    text-align: right; }
+  .header-inner-logo {
+    font-size: 50px;
+    font-size: 5rem;
+    text-decoration: none;
+    color: #A09F9B;
+    font-weight: bold;
+    text-shadow: 3px 3px 0 #d2d1cf;
+    font-family: 'Source Sans Pro', sans-serif; }
+  .header-inner .search-box {
+    display: inline-block; }
+
+.search-box {
+  width: 100%;
+  position: relative;
+  letter-spacing: -.4em; }
+  .search-box .input {
+    width: 100%;
+    padding-right: 50px; }
+  .search-box-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #A09F9B;
+    border-radius: 0 3px 3px 0;
+    position: absolute;
+    top: 0;
+    right: 0; }
+
+.input {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid #F5F1E9;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
+  .input::-webkit-input-placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }
+  .input::-moz-placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }
+  .input:-ms-input-placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }
+  .input::placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }
+
+.icon-search {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative; }
+  .icon-search > span {
+    display: block;
+    position: absolute; }
+    .icon-search > span:nth-child(1) {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      -webkit-transform: translate(12px, 6px);
+      transform: translate(12px, 6px); }
+    .icon-search > span:nth-child(2) {
+      width: 10px;
+      height: 3px;
+      background: #fff;
+      -webkit-transform: translate(7px, 25px) rotate(-45deg);
+      transform: translate(7px, 25px) rotate(-45deg); }
 
 .footer {
   font-size: 18px;
@@ -591,6 +729,11 @@ input, button, select, textarea {
       font-size: 20px;
       font-size: 2rem;
       margin-bottom: 33px; }
+    .main-view-text > span > span {
+      font-weight: bold;
+      font-size: 24px;
+      font-size: 2.4rem;
+      color: #878681; }
 
 .section-text {
   font-size: 18px;
@@ -619,11 +762,12 @@ input, button, select, textarea {
   text-align: center; }
 
 .card-list {
-  display: table;
-  table-layout: fixed;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 30px;
+  letter-spacing: -.4em; }
 .card-item {
-  display: table-cell;
+  display: inline-block;
+  letter-spacing: 0;
   width: 33.33%;
   text-align: center;
   padding: 0 15px; }
@@ -631,6 +775,11 @@ input, button, select, textarea {
 .page-index .header {
   margin-bottom: 142px; }
 .page-index .section {
+  margin-bottom: 192px; }
+
+.page-archive .header {
+  margin-bottom: 80px; }
+.page-archive .section {
   margin-bottom: 192px; }
 
 /*
@@ -704,15 +853,14 @@ _card.scss
   text-align: left;
   background: #fff;
   box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
-  position: relative;
-  transition: box-shadow 0.35s, -webkit-transform 0.35s;
-  transition: box-shadow 0.35s, transform 0.35s; }
-  .card:hover {
-    -webkit-transform: translate3d(6px, 6px, 0);
-    transform: translate3d(6px, 6px, 0);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2); }
-    .card:hover a {
-      color: #4965B5; }
+  position: relative; }
+  .card:hover a {
+    color: #4965B5; }
+  .card:hover .comment {
+    display: block;
+    opacity: 1;
+    -webkit-animation: fade-in 0.35s;
+    animation: fade-in 0.35s; }
   .card-body {
     padding: 12px 15px 18px;
     background: #3D3D3E; }
@@ -738,6 +886,38 @@ _card.scss
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: right; }
+
+.comment {
+  width: 320px;
+  position: absolute;
+  background: #fff;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  top: -20%;
+  right: -100px;
+  z-index: 3;
+  line-height: 1.6;
+  padding: 10px;
+  opacity: 0;
+  display: none; }
+  .comment-arrow, .comment-arrow:before {
+    position: absolute;
+    z-index: 4;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 16px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.2);
+    bottom: -32px;
+    left: 30px; }
+    .comment-arrow:before {
+      content: "";
+      border-top-color: #fff;
+      bottom: -16px;
+      left: -24px; }
+
+.card-item:nth-child(3) .comment {
+  right: 0; }
 
 /*
 #overview

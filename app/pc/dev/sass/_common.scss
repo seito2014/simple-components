@@ -95,14 +95,14 @@
 .card {
 
     &-list {
-        display: table;
-        table-layout: fixed;
         width: 100%;
         margin-bottom: 30px;
+        letter-spacing: -.4em;
     }
 
     &-item {
-        display: table-cell;
+        display: inline-block;
+        letter-spacing: 0;
         width: 33.33%;
         text-align: center;
         padding: 0 15px;
