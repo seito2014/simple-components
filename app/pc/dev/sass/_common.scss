@@ -41,6 +41,12 @@
                 @include rem(20);
                 margin-bottom: 33px;
             }
+            
+            > span {
+                font-weight: bold;
+                @include rem(24);
+                color: darken($grey,10%);
+            }
         }
     }
 }
@@ -92,6 +98,7 @@
         display: table;
         table-layout: fixed;
         width: 100%;
+        margin-bottom: 30px;
     }
 
     &-item {

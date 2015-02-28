@@ -18,11 +18,8 @@ _card.scss
     background: #fff;
     box-shadow: $shadow;
     position: relative;
-    transition: box-shadow $speed, transform $speed;
 
     &:hover {
-        transform: translate3d(6px,6px,0);
-        box-shadow: $shadow-none;
         
         a {
             color: $color-a;

@@ -2,8 +2,16 @@
     width: 100%;
     background: #fff;
     box-shadow: $shadow;
+
+    &-lower {
+
+        .nav-list {
+            border-top: 1px solid $foundation;
+        }
+    }
 }
 
+//global nav
 .nav {
     @extend .container;
     font-family: $font-en;
@@ -12,7 +20,6 @@
         width: 100%;
         display: table;
         table-layout: fixed;
-        border-left: 1px solid $foundation;
     }
 
     &-item {
@@ -22,6 +29,10 @@
         vertical-align: center;
         text-align: center;
         border-right: 1px solid $foundation;
+
+        &:last-child {
+            border-right: 0;
+        }
 
         > a {
             @include rem(20);
@@ -37,6 +48,101 @@
             &:hover {
                 background: $default;
                 color: #fff;
+            }
+        }
+    }
+}
+
+//header-inner
+.header-inner {
+    @extend %clearfix;
+    width: 100%;
+    padding: 20px 30px;
+
+    &-left {
+        float: left;
+        width: 40%;
+    }
+
+    &-right {
+        float: right;
+        width: 40%;
+        text-align: right;
+    }
+
+    &-logo {
+        @include rem(50);
+        text-decoration: none;
+        color: $grey;
+        font-weight: bold;
+        text-shadow: 3px 3px 0 lighten($grey,20%);
+        font-family: $font-en;
+    }
+    
+    .search-box {
+        display: inline-block;
+    }
+}
+
+.search-box {
+    width: 100%;
+    position: relative;
+    letter-spacing: -.4em;
+
+    .input {
+        width: 100%;
+        padding-right: 50px;
+    }
+
+    &-button {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: $grey;
+        border-radius: 0 3px 3px 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+
+.input {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid $foundation;
+    border-radius: 3px;
+    padding: 0 10px;
+    font-family: $font;
+    @include placeholder($grey,16px);
+}
+
+.icon {
+
+    &-search {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        position: relative;
+
+        > span {
+            display: block;
+            position: absolute;
+
+            &:nth-child(1) {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 3px solid #fff;
+                transform: translate(12px, 6px);
+            }
+
+            &:nth-child(2) {
+                width: 10px;
+                height: 3px;
+                background: #fff;
+                transform: translate(7px, 25px) rotate(-45deg);
             }
         }
     }
