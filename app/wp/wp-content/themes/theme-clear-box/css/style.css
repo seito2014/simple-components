@@ -854,8 +854,6 @@ _card.scss
   background: #fff;
   box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
   position: relative; }
-  .card:hover a {
-    color: #4965B5; }
   .card:hover .comment {
     display: block;
     opacity: 1;
@@ -875,6 +873,8 @@ _card.scss
       font-weight: bold;
       line-height: 1.6;
       transition: color 0.35s; }
+      .card-heading > a:hover {
+        color: #4965B5; }
   .card-tag-list {
     letter-spacing: -.4em;
     margin: 0 -5px 8px; }
@@ -957,3 +957,5 @@ _tag.scss
   background: #fff;
   border-radius: 3px;
   transition: color 0.35s; }
+  .tag:hover {
+    color: #4965B5; }

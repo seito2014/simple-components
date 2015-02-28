@@ -39,24 +39,11 @@
                             </div>
                             <div class="card-body">
                                 <h1 class="card-heading">
-                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    <a href="<?php the_excerpt(); ?>" target="_blank"><?php the_title(); ?></a>
                                 </h1>
-<!--                                --><?php //the_tags(); ?>
-<!--                                -->
-<!--                                <ul class="card-tag-list">-->
-<!--                                    <li class="card-tag-item">-->
-<!--                                        <a class="tag" href="#">form</a>-->
-<!--                                    </li>-->
-<!--                                    <li class="card-tag-item">-->
-<!--                                        <a class="tag" href="#">html</a>-->
-<!--                                    </li>-->
-<!--                                    <li class="card-tag-item">-->
-<!--                                        <a class="tag" href="#">css</a>-->
-<!--                                    </li>-->
-<!--                                    <li class="card-tag-item">-->
-<!--                                        <a class="tag" href="#">js</a>-->
-<!--                                    </li>-->
-<!--                                </ul>-->
+                                <ul class="card-tag-list">
+                                    <?php the_tags('<li class="card-tag-item">','</li><li class="card-tag-item">','</li>');?>
+                                </ul>
                                 <footer class="card-footer">
                                     <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y/m/d'); ?></time>
                                 </footer>

@@ -19,4 +19,8 @@ _tag.scss
     background: #fff;
     border-radius: 3px;
     transition: color $speed;
+
+    &:hover {
+        color: $color-a;
+    }
 }
