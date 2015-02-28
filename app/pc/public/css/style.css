@@ -101,6 +101,44 @@ table {
   margin: 0;
   line-height: 1; }
 
+@-webkit-keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0); }
+
+  1% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0); }
+
+  100% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0); }
+
+  1% {
+    display: block;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0); }
+
+  100% {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
 .u_mt0 {
   margin-top: 0px !important; }
 
@@ -818,6 +856,11 @@ _card.scss
   position: relative; }
   .card:hover a {
     color: #4965B5; }
+  .card:hover .comment {
+    display: block;
+    opacity: 1;
+    -webkit-animation: fade-in 0.35s;
+    animation: fade-in 0.35s; }
   .card-body {
     padding: 12px 15px 18px;
     background: #3D3D3E; }
@@ -843,6 +886,38 @@ _card.scss
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: right; }
+
+.comment {
+  width: 320px;
+  position: absolute;
+  background: #fff;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  top: -20%;
+  right: -100px;
+  z-index: 3;
+  line-height: 1.6;
+  padding: 10px;
+  opacity: 0;
+  display: none; }
+  .comment-arrow, .comment-arrow:before {
+    position: absolute;
+    z-index: 4;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 16px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.2);
+    bottom: -32px;
+    left: 30px; }
+    .comment-arrow:before {
+      content: "";
+      border-top-color: #fff;
+      bottom: -16px;
+      left: -24px; }
+
+.card-item:nth-child(3) .comment {
+  right: 0; }
 
 /*
 #overview

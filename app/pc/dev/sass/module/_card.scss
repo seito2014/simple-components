@@ -24,6 +24,12 @@ _card.scss
         a {
             color: $color-a;
         }
+
+        .comment {
+            display: block;
+            opacity: 1;
+            animation: fade-in $speed;
+        }
     }
 
     //&-embed {}
@@ -62,5 +68,53 @@ _card.scss
         color: #fff;
         font-family: $font-en;
         text-align: right;
+    }
+}
+
+
+//comment
+.comment {
+    width: 320px;
+    position: absolute;
+    background: #fff;
+    box-shadow: $shadow;
+    border-radius: 3px;
+    top: -20%;
+    right: -100px;
+    z-index: 3;
+    line-height: 1.6;
+    padding: 10px;
+    opacity: 0;
+    display: none;
+
+    &-arrow {
+        position: absolute;
+        z-index: 4;
+
+        display: block;
+        width: 0;
+        height: 0;
+        border: 16px solid transparent;
+
+
+        border-top-color: rgba(0,0,0,.2);
+        bottom: -32px;
+        left: 30px;
+        
+        &:before {
+            @extend .comment-arrow;
+            content: "";
+            border-top-color: #fff;
+            bottom: -16px;
+            left: -24px;
+        }
+    }
+}
+
+.card-item {
+    &:nth-child(3) {
+        .comment {
+            right: 0;
+        }
     }
 }
