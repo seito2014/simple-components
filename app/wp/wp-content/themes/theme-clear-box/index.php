@@ -22,7 +22,10 @@
             <ul class="card-list">
 
                 <?php
-                query_posts('post_type=code');
+                query_posts(array(
+                    'posts_per_page' => 3,
+                    'post_type' => 'code'
+                ));
                 if (have_posts()) : while (have_posts()) : the_post(); ?>
                     <li class="card-item">
                         <article class="card">
@@ -67,8 +70,28 @@
         <h1 class="heading">Tag</h1>
 
         <div class="section-contents">
-            <ul class="tag-list">
-                <?php the_tags('<li class="tag-list-item">', '</li><li class="tag-list-item">', '</li>'); ?>
+
+                <?php
+                $terms = get_terms("post_tag", "fields=all");
+
+                echo '<ul class="tag-list">';
+
+                foreach ( $terms as $term ) {
+
+                    // この $term はオブジェクトなので、$taxonomy を指定しなくてよい。
+                    $term_link = get_term_link( $term );
+
+                    // エラーなら次のタームへ進む。
+                    if ( is_wp_error( $term_link ) ) {
+                        continue;
+                    }
+
+                    // リンクを取得できたのでプリントアウトする。
+                    echo '<li class="tag-list-item"><a href="' . esc_url( $term_link ) . '" class="tag">' . $term->name . '</a></li>';
+                }
+
+                echo '</ul>';
+                ?>
             </ul>
         </div>
     </section>
