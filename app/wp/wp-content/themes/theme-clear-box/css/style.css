@@ -710,6 +710,7 @@ input, button, select, textarea {
   top: 50%;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
+  left: 0;
   z-index: 2;
   color: #A09F9B;
   text-align: center;
@@ -768,6 +769,7 @@ input, button, select, textarea {
 .card-item {
   display: inline-block;
   letter-spacing: 0;
+  vertical-align: top;
   width: 33.33%;
   text-align: center;
   padding: 0 15px; }
