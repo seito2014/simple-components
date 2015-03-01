@@ -32,9 +32,9 @@
                             </div>
 
                             <div class="card-embed">
-                                <p data-height="268" data-theme-id="0" data-slug-hash="EaEwrx"
+                                <p data-height="268" data-theme-id="0" data-slug-hash="<?php echo substr(get_the_excerpt(),32,39) ?>"
                                    data-default-tab="result" data-user="seito2014" class='codepen'>
-                                    See the Pen <a href='<?php the_excerpt(); ?>'>EaEwrx</a> by Seito (<a
+                                    See the Pen <a href='<?php the_excerpt(); ?>'><?php echo substr(get_the_excerpt(),32,39) ?></a> by Seito (<a
                                         href='http://codepen.io/seito2014'>@seito2014</a>) on
                                     <a href='http://codepen.io'>CodePen</a>.
                                 </p>
@@ -59,6 +59,48 @@
 
             <div class="section-footer">
                 <a href="<?php echo get_post_type_archive_link('code'); ?>" class="button">more</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h1 class="heading">Tag</h1>
+
+        <div class="section-contents">
+            <ul class="tag-list">
+                <?php the_tags('<li class="tag-list-item">', '</li><li class="tag-list-item">', '</li>'); ?>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h1 class="heading">About</h1>
+        <div class="section-contents">
+
+            <div class="section-text">
+                <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+                    <br/>
+                    サンプルテキストサンプルテキストサンプルテキスト
+                    サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+                    <br/>サンプルテキストサンプルテキスト
+                </p>
+                <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+                    <br/>
+                    サンプルテキストサンプルテキストサンプルテキスト
+                    サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+                    <br/>サンプルテキスト<strong>サンプルテキスト</strong>
+                </p>
+                <ul>
+                    <li>サンプルテキストサンプルテキストサンプルテキスト</li>
+                    <li>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</li>
+                    <li>サンプルテキストサンプルテキストサンプルテキスト</li>
+                </ul>
+            </div>
+
+            <div class="section-footer">
+                <a href="#" target="_blank"><img src="http://placehold.it/200x100" height="100" width="200" alt=""></a>
+                <a href="#" target="_blank"><img src="http://placehold.it/200x100" height="100" width="200" alt=""></a>
+                <a href="#" target="_blank"><img src="http://placehold.it/200x100" height="100" width="200" alt=""></a>
             </div>
         </div>
     </section>

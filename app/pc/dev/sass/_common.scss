@@ -5,6 +5,7 @@
 //main-view
 .main-view {
     @extend .container;
+    position: relative;
 
     &-visual {
         width: 100%;
@@ -31,6 +32,7 @@
                 @include rem(140);
                 font-weight: bold;
                 margin-bottom: 34px;
+                text-shadow: 6px 6px 0 lighten($grey,20%);
             }
 
             &:nth-child(2) {
@@ -108,5 +110,22 @@
         width: 33.33%;
         text-align: center;
         padding: 0 15px;
+    }
+}
+
+
+//tag
+.tag-list {
+    padding: 0 20px;
+
+    &-item {
+        display: inline-block;
+    }
+
+    .tag {
+        margin: 10px;
+        @include rem(20);
+        padding: 10px 20px 10px;
+        box-shadow: $shadow;
     }
 }

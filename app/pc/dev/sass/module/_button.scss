@@ -27,11 +27,9 @@ _button.scss
     font-family: $font-en;
     box-shadow: $shadow;
     position: relative;
-    transition: box-shadow $speed, transform $speed , color $speed;
+    transition: color $speed;
 
     &:hover {
-        transform: translate3d(6px,6px,0);
-        box-shadow: $shadow-none;
         color: $color-a;
     }
 
