@@ -16,7 +16,7 @@
 
         <div class="header-inner">
             <div class="header-inner-left">
-                <a href="<?php site_url(); ?>" class="header-inner-logo">SUSI</a>
+                <a href="<?php echo home_url(); ?>" class="header-inner-logo">SUSI</a>
             </div>
             <div class="header-inner-right">
                 <form action="#" class="search-box">
@@ -35,7 +35,7 @@
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="<?php site_url(); ?>">Top</a>
+                    <a href="<?php echo home_url(); ?>">Top</a>
                 </li>
                 <li class="nav-item">
                     <a href="#">Components</a>
