@@ -55,3 +55,14 @@ _button.scss
         font-weight: normal;
     }
 }
+
+@include sp {
+
+    .button {
+        @include rem(18);
+
+        &.small {
+            @include rem(16);
+        }
+    }
+}

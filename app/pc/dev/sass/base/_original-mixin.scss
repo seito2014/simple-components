@@ -1,0 +1,11 @@
+@mixin tb {
+    @media (min-width: 780px) and (max-width: $size-max) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media all and (max-width: 780px) {
+        @content;
+    }
+}

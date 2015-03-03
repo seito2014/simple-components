@@ -26,7 +26,7 @@
         width: 25%;
         height: 60px;
         display: table-cell;
-        vertical-align: center;
+        vertical-align: middle;
         text-align: center;
         border-right: 1px solid $foundation;
 
@@ -48,6 +48,27 @@
             &:hover {
                 background: $default;
                 color: #fff;
+            }
+        }
+    }
+}
+
+@include sp {
+
+    .nav {
+
+        &-item {
+
+            &:nth-child(1) {
+                width: 23%;
+            }
+
+            &:nth-child(2) {
+                width: 31%;
+            }
+
+            > a {
+                @include rem(15);
             }
         }
     }

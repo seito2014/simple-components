@@ -24,6 +24,7 @@
         color: $grey;
         text-align: center;
         font-family: $font-en;
+        position: absolute;
 
         > span {
             display: block;
@@ -119,7 +120,6 @@
     }
 }
 
-
 //tag
 .tag-list {
     padding: 0 20px;
@@ -133,5 +133,90 @@
         @include rem(20);
         padding: 10px 20px 10px;
         box-shadow: $shadow;
+    }
+}
+
+@include tb {
+    .main-view {
+        @extend .container;
+        position: relative;
+
+        &-text {
+
+            > span {
+
+                &:nth-child(1) {
+                    @include rem(120);
+                    line-height: 2;
+                    margin-bottom: 32px;
+                }
+
+                &:nth-child(2) {
+                    @include rem(40);
+                    margin-bottom: 30px;
+                }
+
+                &:nth-child(3) {
+                    @include rem(18);
+                }
+
+                > span {
+                    @include rem(24);
+                }
+            }
+        }
+    }
+
+    .card-item {
+        width: 50%;
+    }
+}
+
+@include sp {
+    .main-view {
+
+        &-text {
+            padding: 0 10px;
+
+            > span {
+
+                &:nth-child(1) {
+                    @include rem(100);
+                    line-height: 1;
+                    margin-bottom: 20px;
+                }
+
+                &:nth-child(2) {
+                    @include rem(30);
+                    line-height: 36px;
+                    margin-bottom: 14px;
+                }
+
+                &:nth-child(3) {
+                    @include rem(13);
+                    line-height: 1.4;
+                }
+
+                > span {
+                    @include rem(24);
+                }
+            }
+
+        }
+    }
+
+    .card-item {
+        width: 100%;
+    }
+
+    .section {
+
+        &-text {
+            @include rem(15);
+
+            p {
+                margin-bottom: 14px;
+            }
+        }
     }
 }

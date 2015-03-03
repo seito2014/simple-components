@@ -46,3 +46,10 @@ textarea {
     background: $grey;
     color: #fff;
 }
+
+@include sp {
+
+    .container {
+        padding: 0;
+    }
+}

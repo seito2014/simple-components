@@ -18,3 +18,11 @@ _heading.scss
     font-weight: bold;
     margin-bottom: 42px;
 }
+
+@include sp {
+
+    .heading {
+        @include rem(30);
+        margin-bottom: 30px;
+    }
+}

@@ -79,7 +79,7 @@ _card.scss
     box-shadow: $shadow;
     border-radius: 3px;
     top: -20%;
-    right: -100px;
+    left: 0;
     z-index: 3;
     line-height: 1.6;
     padding: 10px;
@@ -106,14 +106,6 @@ _card.scss
             border-top-color: #fff;
             bottom: -16px;
             left: -24px;
-        }
-    }
-}
-
-.card-item {
-    &:nth-child(3) {
-        .comment {
-            right: 0;
         }
     }
 }
