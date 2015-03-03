@@ -109,6 +109,7 @@
     width: 100%;
     position: relative;
     letter-spacing: -.4em;
+    padding-top: 5px;
 
     .input {
         width: 100%;
@@ -122,7 +123,7 @@
         background: $grey;
         border-radius: 0 3px 3px 0;
         position: absolute;
-        top: 0;
+        top: 5px;
         right: 0;
     }
 }
@@ -166,5 +167,20 @@
                 transform: translate(7px, 25px) rotate(-45deg);
             }
         }
+    }
+}
+
+@include sp {
+    
+    .header-inner {
+        padding: 15px 10px;
+    }
+
+    .header-inner-left {
+        width: 40%;
+    }
+
+    .header-inner-right {
+        width: 60%;
     }
 }

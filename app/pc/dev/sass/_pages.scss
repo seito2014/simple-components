@@ -20,3 +20,28 @@
     }
 }
 
+
+@include sp {
+
+    .page-index {
+
+        .header {
+            margin-bottom: 66px;
+        }
+
+        .section {
+            margin-bottom: 56px;
+        }
+    }
+
+    .page-archive {
+
+        .header {
+            margin-bottom: 70px;
+        }
+
+        .section {
+            margin-bottom: 56px;
+        }
+    }
+}

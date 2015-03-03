@@ -44,7 +44,7 @@
                     <a href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">License & Author</a>
+                    <a href="#">License</a>
                 </li>
             </ul>
         </nav>

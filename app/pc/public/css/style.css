@@ -617,7 +617,8 @@ input, button, select, textarea {
 .search-box {
   width: 100%;
   position: relative;
-  letter-spacing: -.4em; }
+  letter-spacing: -.4em;
+  padding-top: 5px; }
   .search-box .input {
     width: 100%;
     padding-right: 50px; }
@@ -628,7 +629,7 @@ input, button, select, textarea {
     background: #A09F9B;
     border-radius: 0 3px 3px 0;
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 0; }
 
 .input {
@@ -681,6 +682,14 @@ input, button, select, textarea {
       background: #fff;
       -webkit-transform: translate(7px, 25px) rotate(-45deg);
       transform: translate(7px, 25px) rotate(-45deg); }
+
+@media all and (max-width: 780px) {
+  .header-inner {
+    padding: 15px 10px; }
+  .header-inner-left {
+    width: 40%; }
+  .header-inner-right {
+    width: 60%; } }
 
 .footer {
   font-size: 18px;
@@ -785,6 +794,8 @@ input, button, select, textarea {
 .section-footer {
   margin-top: 50px;
   text-align: center; }
+  .section-footer > a {
+    display: inline-block; }
 
 .card-list {
   width: 100%;
@@ -852,13 +863,26 @@ input, button, select, textarea {
     .main-view-text > span > span {
       font-size: 24px;
       font-size: 2.4rem; }
+  .card-list {
+    margin-bottom: 20px; }
   .card-item {
     width: 100%; }
   .section-text {
     font-size: 15px;
     font-size: 1.5rem; }
     .section-text p {
-      margin-bottom: 14px; } }
+      margin-bottom: 14px; }
+  .section-footer {
+    letter-spacing: -.4em;
+    padding: 0 5px;
+    margin-top: 20px; }
+    .section-footer > a {
+      width: 33.33%;
+      padding: 0 5px;
+      letter-spacing: 0; }
+      .section-footer > a img {
+        width: 100%;
+        height: auto; } }
 
 .page-index .header {
   margin-bottom: 142px; }
@@ -869,6 +893,16 @@ input, button, select, textarea {
   margin-bottom: 80px; }
 .page-archive .section {
   margin-bottom: 192px; }
+
+@media all and (max-width: 780px) {
+  .page-index .header {
+    margin-bottom: 66px; }
+  .page-index .section {
+    margin-bottom: 56px; }
+  .page-archive .header {
+    margin-bottom: 70px; }
+  .page-archive .section {
+    margin-bottom: 56px; } }
 
 /*
 * module
