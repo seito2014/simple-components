@@ -19,7 +19,7 @@
         $window.on('resize', styledHeight);
 
         //particlesJS
-        var COLOR_B = '#00CCCC';
+        var COLOR_B = '#7fe5e5';
         particlesJS('js-main-view-visual', {
             particles: {
                 color: COLOR_B,
@@ -36,7 +36,7 @@
                 },
                 size: 2.5,
                 size_random: true,
-                nb: 100,
+                nb: 180,
                 line_linked: {
                     enable_auto: true,
                     distance: 140,
