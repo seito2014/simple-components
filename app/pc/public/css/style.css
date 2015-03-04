@@ -927,20 +927,20 @@ _button.scss
   line-height: 50px;
   text-decoration: none;
   cursor: pointer;
-  background: #fff;
-  color: #555;
+  background: #00CCCC;
+  color: #fff;
   text-align: center;
   border-radius: 3px;
   font-weight: bold;
   font-family: 'Source Sans Pro', sans-serif;
   box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
   position: relative;
-  transition: color 0.35s; }
+  transition: color 0.35s, background-color 0.35s; }
   .button:hover {
-    color: #4965B5; }
+    background: #00e0e0; }
   .button-primary {
     width: 30%;
-    color: #A09F9B; }
+    color: #fff; }
   .button-twitter {
     color: #fff;
     background: #60b5de; }

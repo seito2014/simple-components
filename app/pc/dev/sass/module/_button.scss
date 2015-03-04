@@ -19,23 +19,24 @@ _button.scss
     line-height: 50px;
     text-decoration: none;
     cursor: pointer;
-    background: #fff;
-    color: $default;
+    background: $color-b;
+    color: #fff;
     text-align: center;
     border-radius: 3px;
     font-weight: bold;
     font-family: $font-en;
     box-shadow: $shadow;
     position: relative;
-    transition: color $speed;
+    transition: color $speed, background-color $speed;
 
     &:hover {
-        color: $color-a;
+//        color: $color-b;
+        background: lighten($color-b,4%);
     }
 
     &-primary {
         width: 30%;
-        color: $grey;
+        color: #fff;
     }
     
     &-twitter {
