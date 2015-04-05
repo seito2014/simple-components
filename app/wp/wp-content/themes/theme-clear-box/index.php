@@ -6,7 +6,8 @@
         <span>SUSI</span>
         <span>"Let's do coding speedy,and go home early."</span>
         <span>This is "The <span>S</span>nipets of <span>U</span>tility and <span>S</span>imple <span>I</span>tems, with HTML,CSS,Javascript.</span>
-        <a href="#" class="button button-primary">Get start</a>
+        <!--<a href="#" class="button button-primary">Get start</a>-->
+        <?php get_search_form(); ?>
     </h1>
 </div>
 

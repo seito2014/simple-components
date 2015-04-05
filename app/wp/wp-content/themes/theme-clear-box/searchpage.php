@@ -1,4 +1,8 @@
-<!--Template Name: archives-->
+<?php
+/*
+Template Name: Search Page
+*/
+?>
 
 <?php get_template_part('head'); ?>
 

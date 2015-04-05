@@ -20,15 +20,6 @@
             </div>
             <div class="header-inner-right">
                 <?php get_search_form(); ?>
-<!--                <form action="#" class="search-box">-->
-<!--                    <input type="search" value="" placeholder="ex)button, media, input ..." class="input"/>-->
-<!--                    <button class="search-box-button">-->
-<!--                        <i class="icon icon-search">-->
-<!--                            <span></span>-->
-<!--                            <span></span>-->
-<!--                        </i>-->
-<!--                    </button>-->
-<!--                </form>-->
             </div>
         </div>
 

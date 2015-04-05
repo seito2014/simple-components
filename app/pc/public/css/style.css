@@ -632,35 +632,6 @@ input, button, select, textarea {
     top: 5px;
     right: 0; }
 
-.input {
-  display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  border: 2px solid #F5F1E9;
-  border-radius: 3px;
-  padding: 0 10px;
-  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
-  .input::-webkit-input-placeholder {
-    font-size: 16pxpx;
-    font-size: 1.6pxrem;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    color: #A09F9B; }
-  .input::-moz-placeholder {
-    font-size: 16pxpx;
-    font-size: 1.6pxrem;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    color: #A09F9B; }
-  .input:-ms-input-placeholder {
-    font-size: 16pxpx;
-    font-size: 1.6pxrem;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    color: #A09F9B; }
-  .input::placeholder {
-    font-size: 16pxpx;
-    font-size: 1.6pxrem;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    color: #A09F9B; }
-
 .icon-search {
   display: inline-block;
   width: 40px;
@@ -768,6 +739,16 @@ input, button, select, textarea {
         font-size: 24px;
         font-size: 2.4rem;
         color: #878681; }
+  .main-view .search-box {
+    width: 600px;
+    margin: 0 auto; }
+    .main-view .search-box .input {
+      height: 50px;
+      line-height: 50px;
+      border-color: #e5dbc6; }
+    .main-view .search-box .search-box-button {
+      width: 50px;
+      height: 50px; }
 
 .section-text {
   font-size: 18px;
@@ -1088,3 +1069,44 @@ _tag.scss
   transition: color 0.35s; }
   .tag:hover {
     color: #4965B5; }
+
+/*
+#overview
+input
+
+_input.scss
+*/
+/*
+#styleguide
+```
+```
+*/
+.input {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid #F5F1E9;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: #fff; }
+  .input::-webkit-input-placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }
+  .input::-moz-placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }
+  .input:-ms-input-placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }
+  .input::placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }

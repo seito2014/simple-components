@@ -540,6 +540,10 @@ input, button, select, textarea {
   background: #A09F9B;
   color: #fff; }
 
+@media all and (max-width: 780px) {
+  .container, .nav, .contents, .main-view {
+    padding: 0; } }
+
 /*
 * layout
 */
@@ -560,7 +564,7 @@ input, button, select, textarea {
     width: 25%;
     height: 60px;
     display: table-cell;
-    vertical-align: center;
+    vertical-align: middle;
     text-align: center;
     border-right: 1px solid #F5F1E9; }
     .nav-item:last-child {
@@ -579,6 +583,15 @@ input, button, select, textarea {
       .nav-item > a:hover {
         background: #555;
         color: #fff; }
+
+@media all and (max-width: 780px) {
+  .nav-item:nth-child(1) {
+    width: 23%; }
+  .nav-item:nth-child(2) {
+    width: 31%; }
+  .nav-item > a {
+    font-size: 15px;
+    font-size: 1.5rem; } }
 
 .header-inner {
   width: 100%;
@@ -604,7 +617,8 @@ input, button, select, textarea {
 .search-box {
   width: 100%;
   position: relative;
-  letter-spacing: -.4em; }
+  letter-spacing: -.4em;
+  padding-top: 5px; }
   .search-box .input {
     width: 100%;
     padding-right: 50px; }
@@ -615,37 +629,8 @@ input, button, select, textarea {
     background: #A09F9B;
     border-radius: 0 3px 3px 0;
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 0; }
-
-.input {
-  display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  border: 2px solid #F5F1E9;
-  border-radius: 3px;
-  padding: 0 10px;
-  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
-  .input::-webkit-input-placeholder {
-    font-size: 16pxpx;
-    font-size: 1.6pxrem;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    color: #A09F9B; }
-  .input::-moz-placeholder {
-    font-size: 16pxpx;
-    font-size: 1.6pxrem;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    color: #A09F9B; }
-  .input:-ms-input-placeholder {
-    font-size: 16pxpx;
-    font-size: 1.6pxrem;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    color: #A09F9B; }
-  .input::placeholder {
-    font-size: 16pxpx;
-    font-size: 1.6pxrem;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    color: #A09F9B; }
 
 .icon-search {
   display: inline-block;
@@ -669,6 +654,14 @@ input, button, select, textarea {
       -webkit-transform: translate(7px, 25px) rotate(-45deg);
       transform: translate(7px, 25px) rotate(-45deg); }
 
+@media all and (max-width: 780px) {
+  .header-inner {
+    padding: 15px 10px; }
+  .header-inner-left {
+    width: 40%; }
+  .header-inner-right {
+    width: 60%; } }
+
 .footer {
   font-size: 18px;
   font-size: 1.8rem;
@@ -684,6 +677,13 @@ input, button, select, textarea {
     transition: color 0.35s; }
     .footer a:hover {
       color: #fff; }
+
+@media all and (max-width: 780px) {
+  .footer {
+    height: 40px;
+    line-height: 40px;
+    font-size: 10px;
+    font-size: 1rem; } }
 
 .contents {
   padding: 0; }
@@ -716,7 +716,8 @@ input, button, select, textarea {
     z-index: 2;
     color: #A09F9B;
     text-align: center;
-    font-family: 'Source Sans Pro', sans-serif; }
+    font-family: 'Source Sans Pro', sans-serif;
+    position: absolute; }
     .main-view-text > span {
       display: block; }
       .main-view-text > span:nth-child(1) {
@@ -738,6 +739,16 @@ input, button, select, textarea {
         font-size: 24px;
         font-size: 2.4rem;
         color: #878681; }
+  .main-view .search-box {
+    width: 600px;
+    margin: 0 auto; }
+    .main-view .search-box .input {
+      height: 50px;
+      line-height: 50px;
+      border-color: #e5dbc6; }
+    .main-view .search-box .search-box-button {
+      width: 50px;
+      height: 50px; }
 
 .section-text {
   font-size: 18px;
@@ -764,6 +775,8 @@ input, button, select, textarea {
 .section-footer {
   margin-top: 50px;
   text-align: center; }
+  .section-footer > a {
+    display: inline-block; }
 
 .card-list {
   width: 100%;
@@ -790,6 +803,68 @@ input, button, select, textarea {
     padding: 10px 20px 10px;
     box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2); }
 
+@media (min-width: 780px) and (max-width: 1220px) {
+  .main-view {
+    position: relative; }
+    .main-view-text > span:nth-child(1) {
+      font-size: 120px;
+      font-size: 12rem;
+      line-height: 2;
+      margin-bottom: 32px; }
+    .main-view-text > span:nth-child(2) {
+      font-size: 40px;
+      font-size: 4rem;
+      margin-bottom: 30px; }
+    .main-view-text > span:nth-child(3) {
+      font-size: 18px;
+      font-size: 1.8rem; }
+    .main-view-text > span > span {
+      font-size: 24px;
+      font-size: 2.4rem; }
+  .card-item {
+    width: 50%; } }
+
+@media all and (max-width: 780px) {
+  .main-view-text {
+    padding: 0 10px; }
+    .main-view-text > span:nth-child(1) {
+      font-size: 100px;
+      font-size: 10rem;
+      line-height: 1;
+      margin-bottom: 20px; }
+    .main-view-text > span:nth-child(2) {
+      font-size: 30px;
+      font-size: 3rem;
+      line-height: 36px;
+      margin-bottom: 14px; }
+    .main-view-text > span:nth-child(3) {
+      font-size: 13px;
+      font-size: 1.3rem;
+      line-height: 1.4; }
+    .main-view-text > span > span {
+      font-size: 24px;
+      font-size: 2.4rem; }
+  .card-list {
+    margin-bottom: 20px; }
+  .card-item {
+    width: 100%; }
+  .section-text {
+    font-size: 15px;
+    font-size: 1.5rem; }
+    .section-text p {
+      margin-bottom: 14px; }
+  .section-footer {
+    letter-spacing: -.4em;
+    padding: 0 5px;
+    margin-top: 20px; }
+    .section-footer > a {
+      width: 33.33%;
+      padding: 0 5px;
+      letter-spacing: 0; }
+      .section-footer > a img {
+        width: 100%;
+        height: auto; } }
+
 .page-index .header {
   margin-bottom: 142px; }
 .page-index .section {
@@ -799,6 +874,16 @@ input, button, select, textarea {
   margin-bottom: 80px; }
 .page-archive .section {
   margin-bottom: 192px; }
+
+@media all and (max-width: 780px) {
+  .page-index .header {
+    margin-bottom: 66px; }
+  .page-index .section {
+    margin-bottom: 56px; }
+  .page-archive .header {
+    margin-bottom: 70px; }
+  .page-archive .section {
+    margin-bottom: 56px; } }
 
 /*
 * module
@@ -823,20 +908,20 @@ _button.scss
   line-height: 50px;
   text-decoration: none;
   cursor: pointer;
-  background: #fff;
-  color: #555;
+  background: #00CCCC;
+  color: #fff;
   text-align: center;
   border-radius: 3px;
   font-weight: bold;
   font-family: 'Source Sans Pro', sans-serif;
   box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
   position: relative;
-  transition: color 0.35s; }
+  transition: color 0.35s, background-color 0.35s; }
   .button:hover {
-    color: #4965B5; }
+    background: #00e0e0; }
   .button-primary {
     width: 30%;
-    color: #A09F9B; }
+    color: #fff; }
   .button-twitter {
     color: #fff;
     background: #60b5de; }
@@ -849,6 +934,14 @@ _button.scss
     height: 40px;
     line-height: 40px;
     font-weight: normal; }
+
+@media all and (max-width: 780px) {
+  .button {
+    font-size: 18px;
+    font-size: 1.8rem; }
+    .button.small {
+      font-size: 16px;
+      font-size: 1.6rem; } }
 
 /*
 #overview
@@ -908,7 +1001,7 @@ _card.scss
   box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   top: -20%;
-  right: -100px;
+  left: 0;
   z-index: 3;
   line-height: 1.6;
   padding: 10px;
@@ -930,9 +1023,6 @@ _card.scss
       bottom: -16px;
       left: -24px; }
 
-.card-item:nth-child(3) .comment {
-  right: 0; }
-
 /*
 #overview
 heading
@@ -951,6 +1041,12 @@ _heading.scss
   font-size: 5rem;
   font-weight: bold;
   margin-bottom: 42px; }
+
+@media all and (max-width: 780px) {
+  .heading {
+    font-size: 30px;
+    font-size: 3rem;
+    margin-bottom: 30px; } }
 
 /*
 #overview
@@ -973,3 +1069,44 @@ _tag.scss
   transition: color 0.35s; }
   .tag:hover {
     color: #4965B5; }
+
+/*
+#overview
+input
+
+_input.scss
+*/
+/*
+#styleguide
+```
+```
+*/
+.input {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid #F5F1E9;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: #fff; }
+  .input::-webkit-input-placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }
+  .input::-moz-placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }
+  .input:-ms-input-placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }
+  .input::placeholder {
+    font-size: 16pxpx;
+    font-size: 1.6pxrem;
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #A09F9B; }
