@@ -61,7 +61,7 @@
             </ul>
 
             <div class="section-footer">
-                <a href="<?php echo get_post_type_archive_link('code'); ?>" class="button">more</a>
+                <a href="<?php echo get_post_type_archive_link('archicode'); ?>" class="button">more</a>
             </div>
         </div>
     </section>
