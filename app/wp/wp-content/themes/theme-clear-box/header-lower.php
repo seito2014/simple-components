@@ -30,7 +30,7 @@
                     <a href="<?php echo home_url(); ?>">Top</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#">Components</a>
+                    <a href="<?php echo get_post_type_archive_link('code'); ?>">Components</a>
                 </li>
                 <li class="nav-item">
                     <a href="#">About</a>
