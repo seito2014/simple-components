@@ -3,7 +3,7 @@
 <div class="main-view">
     <div class="main-view-visual" id="js-main-view-visual"></div>
     <h1 class="main-view-text">
-        <span>SUSI</span>
+        <span>SUSI(β)</span>
         <span>"Let's do coding speedy,and go home early."</span>
         <span>This is "The <span>S</span>nipets of <span>U</span>tility and <span>S</span>imple <span>I</span>tems, with HTML,CSS,Javascript.</span>
         <!--<a href="#" class="button button-primary">Get start</a>-->
@@ -62,7 +62,7 @@
             </ul>
 
             <div class="section-footer">
-                <a href="<?php echo get_post_type_archive_link('archicode'); ?>" class="button">more</a>
+                <a href="<?php echo get_post_type_archive_link('code'); ?>" class="button">more</a>
             </div>
         </div>
     </section>
