@@ -12,14 +12,30 @@ Template Name: Search Page
 <main class="contents">
 
     <div class="section">
-        <h1 class="heading">All Components</h1>
+        <h1 class="heading">
+            Results:
+            "<?php the_search_query(); ?>"
+            <?php global $wp_query;$total_results = $wp_query->found_posts;?>
+            Hit
+        </h1>
+
+        <?php
+        $tag_description = tag_description();
+        if ( ! empty($tag_description ) )
+            echo '<div>' .$tag_description . '</div>';
+        ?>
 
         <div class="section-contents">
-            <ul class="card-list">
+            <?php
+            global $wp_query;
+            query_posts(array_merge(
+                array( 'post_type' => array('post', 'code') ),
+                $wp_query->query
+            ));
+            if (have_posts()) : while (have_posts()) : the_post();
+                ?>
 
-                <?php
-                query_posts('post_type=code');
-                if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <ul class="card-list">
                     <li class="card-item">
                         <article class="card">
                             <div class="comment">
@@ -48,10 +64,13 @@ Template Name: Search Page
                             </div>
                         </article>
                     </li>
-                <?php endwhile; endif;
-                wp_reset_query(); ?>
+                </ul>
+            <?php endwhile; ?>
 
-            </ul>
+            <?php else : ?>
+                <p class="nothing-text">"<?php the_search_query(); ?>" is nothing.</p>
+            <?php endif; ?>
+
         </div>
 
     </div>
