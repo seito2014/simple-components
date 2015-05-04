@@ -6,7 +6,7 @@
         <div class="for-old">お使いのOS・ブラウザでは本サイトを閲覧することができません。</div>
 
         <!--jsでパスの値が必要な場合に使うタグ-->
-        <input type="hidden" value="<?php echo home_url(); ?>" id="base-url">
+        <input type="hidden" value="<?php echo home_url(); ?>/susi" id="base-url">
 
         <!--wrapper ここから-->
         <div class="wrapper" id="js-wrapper">
@@ -17,10 +17,10 @@
                 <nav class="nav">
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="<?php echo home_url(); ?>">Top</a>
+                            <a href="<?php echo home_url(); ?>/susi">Top</a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo get_post_type_archive_link('code'); ?>">Components</a>
+                            <a href="#">Components</a>
                         </li>
                         <li class="nav-item">
                             <a href="#">About</a>

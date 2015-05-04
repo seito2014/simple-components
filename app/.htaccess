@@ -1,0 +1,15 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Options -Indexes
+AuthUserFile .htpasswd
+AuthGroupFile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+require valid-user 
+order deny,allow
+
+#FBのクローラを許可
+SetEnvIf User-Agent "^facebookexternalhit.*$" fb_crawler
+SetEnvIf User-Agent "^facebookplatform.*$" fb_crawler
+Allow from env=fb_crawler

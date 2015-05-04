@@ -16,10 +16,19 @@
 
         <div class="header-inner">
             <div class="header-inner-left">
-                <a href="<?php echo home_url(); ?>" class="header-inner-logo">SUSI</a>
+                <a href="<?php echo home_url(); ?>/susi" class="header-inner-logo">SUSI</a>
             </div>
             <div class="header-inner-right">
                 <?php get_search_form(); ?>
+<!--                <form action="#" class="search-box">-->
+<!--                    <input type="search" value="" placeholder="ex)button, media, input ..." class="input"/>-->
+<!--                    <button class="search-box-button">-->
+<!--                        <i class="icon icon-search">-->
+<!--                            <span></span>-->
+<!--                            <span></span>-->
+<!--                        </i>-->
+<!--                    </button>-->
+<!--                </form>-->
             </div>
         </div>
 
@@ -27,10 +36,10 @@
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="<?php echo home_url(); ?>">Top</a>
+                    <a href="<?php echo home_url(); ?>/susi">Top</a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?php echo get_post_type_archive_link('code'); ?>">Components</a>
+                    <a href="#">Components</a>
                 </li>
                 <li class="nav-item">
                     <a href="#">About</a>

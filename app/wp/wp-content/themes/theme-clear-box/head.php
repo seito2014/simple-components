@@ -28,8 +28,8 @@
 
     <!--favicon,webclip ここから-->
     <meta name="apple-mobile-web-app-title" content="">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo home_url(); ?>images/apple-touch-icon.png">
-    <link rel="shortcut icon" href="<?php echo home_url(); ?>images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo home_url(); ?>/susi/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="<?php echo home_url(); ?>/susi/images/favicon.ico">
     <!--favicon,webclip ここまで-->
 
     <!--css ここから-->
